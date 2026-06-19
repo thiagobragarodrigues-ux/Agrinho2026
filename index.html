@@ -1,16 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Agrinho 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimento para a Mesa, Vida para a Terra</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2d6a4f;
+            --primary-light: #52b788;
+            --dark: #1b4332;
+            --text: #2b2d42;
+            --bg: #f4f7f5;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* Navbar */
+        nav { background: var(--white); padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); sticky: top; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--dark); font-size: 1.3rem; }
+        .badge { background: #e9f5ed; color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+
+        /* Hero */
+        header {
+            background: linear-gradient(135deg, rgba(27, 67, 50, 0.9), rgba(45, 106, 79, 0.85)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            color: var(--white);
+            padding: 120px 0;
+            text-align: center;
+        }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .subtitle { font-size: 1.25rem; font-weight: 300; opacity: 0.9; max-width: 650px; margin: 0 auto; }
+
+        /* Main Content */
+        main { padding: 80px 0; }
+        .intro { font-size: 1.3rem; color: var(--dark); margin-bottom: 60px; line-height: 1.9; font-weight: 400; text-align: center; max-width: 850px; margin-left: auto; margin-right: auto; }
+
+        /* Cards Grid */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+        .card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.04); transition: transform 0.3s ease; border: 1px solid rgba(0,0,0,0.03); }
+        .card:hover { transform: translateY(-8px); }
+        .card-img { height: 220px; width: 100%; object-fit: cover; }
+        .card-content { padding: 35px; }
+        .card h3 { font-family: 'Playfair Display', serif; color: var(--dark); font-size: 1.6rem; margin-bottom: 15px; }
+
+        /* Conclusion */
+        .conclusion { background: var(--dark); color: var(--white); padding: 50px; border-radius: 16px; margin-top: 40px; box-shadow: 0 15px 30px rgba(27,67,50,0.2); }
+        .conclusion h4 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 15px; color: var(--primary-light); }
+
+        /* Footer */
+        footer { background: #112a20; color: rgba(255,255,255,0.6); text-align: center; padding: 40px 20px; font-size: 0.9rem; margin-top: 80px; }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2.5rem; }
+            .conclusion { padding: 30px; }
+        }
+    </style>
 </head>
 <body>
-    <header>A Força do Campo: Como a Agricultura de Baixo Carbono Protege o Solo e o Futuro</header>
-    <main>
-        <div>
-            <p>A urgência climática nos obriga a repensar a produção de alimentos, colocando o campo no centro do debate ambiental. Por muito tempo, a agropecuária foi ligada ao esmatamento, mas a Agricultura de Baixo Carbono está mudando essa realidade. Técnicas como o Plantio Direto e a Integração Lavoura-Pecuária-Floresta (ILPF) provam que é possível produzir em harmonia com a natureza, recuperando solos e combatendo o aquecimento global.O Plantio Direto é o primeiro passo para essa mudança. Em vez de revirar a terra e expô-la ao sol e à chuva, o agricultor planta diretamente sobre os restos da colheita anterior. Essa cobertura protege o solo da erosão e mantém o carbono guardado na terra. É um processo simples que devolve a vida ao solo, transformando áreas degradadas em terrenos férteis sem liberar gases poluentes na atmosfera.Já o sistema ILPF vai além e integra lavoura, gado e floresta no mesmo espaço. Essa combinação otimiza o uso da terra, evitando a necessidade de desmatar novas áreas. Enquanto as árvores limpam o ar absorvendo o carbono, elas criam sombras que protegem o gado do calor. É um ciclo vivo onde as plantas alimentam o gado, os animais adubam a terra e as árvores protegem o ecossistema.Apoiar essa agricultura consciente é o caminho para garantir alimentos no futuro. Para que essa transição aconteça de verdade, o produtor rural precisa de incentivos e financiamentos acessíveis. Adotar o Plantio Direto e a ILPF é provar que a economia e a preservação podem caminhar juntas, mostrando que o sucesso da nossa mesa depende diretamente da saúde do nosso solo.</p>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">EcoCampo</div>
+            <span class="badge">Agricultura Sustentável</span>
         </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Alimento para a Mesa,<br>Vida para a Terra</h1>
+            <p class="subtitle">O rumo da agricultura que recupera solos, combate o aquecimento global e otimiza o uso da terra.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <p class="intro">
+            A urgência climática nos obriga a repensar a produção de alimentos, colocando o campo no centro do debate ambiental. Por muito tempo, a agropecuária foi ligada ao desmatamento, mas a Agricultura de Baixo Carbono está mudando essa realidade. Técnicas modernas provam que é possível produzir em harmonia com a natureza.
+        </p>
+
+        <section class="grid">
+            <div class="card">
+                <img src="https://unsplash.com" alt="Plantio Direto" class="card-img">
+                <div class="card-content">
+                    <h3>O Plantio Direto</h3>
+                    <p>É o primeiro passo para essa mudança. Em vez de revirar a terra e expô-la ao sol e à chuva, o agricultor planta diretamente sobre os restos da colheita anterior. Essa cobertura protege o solo da erosão e mantém o carbono guardado na terra. Um processo simples que devolve a vida ao solo, transformando áreas degradadas em terrenos férteis sem liberar gases poluentes na atmosfera.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://unsplash.com" alt="Sistema ILPF" class="card-img">
+                <div class="card-content">
+                    <h3>O Sistema ILPF</h3>
+                    <p>Vai além e integra lavoura, gado e floresta no mesmo espaço. Essa combinação otimiza o uso da terra, evitando a necessidade de desmatar novas áreas. Enquanto as árvores limpam o ar absorvendo o carbono, elas criam sombras que protegem o gado do calor. É um ciclo vivo onde as plantas alimentam o gado, os animais adubam a terra e as árvores protegem o ecossistema.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="conclusion">
+            <h4>Conclusão</h4>
+            <p>Apoiar essa agricultura consciente é o caminho para garantir alimentos no futuro. Para que essa transição aconteça de verdade, o produtor rural precisa de incentivos e financiamentos acessíveis. Adotar o Plantio Direto e a ILPF é provar que a economia e a preservação podem caminhar juntas, mostrando que o sucesso da nossa mesa depende diretamente da saúde do nosso solo.</p>
+        </section>
     </main>
+
+    <footer>
+        <p>Projeto Agricultura de Baixo Carbono &copy; 2026. Conteúdo com foco ambiental. Fonte: IA</p>
+    </footer>
+
 </body>
 </html>
